@@ -1,74 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Airon Saez</title>   
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Airon Sáez — Portafolio</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    <header>
-        <h1>Airon Mauricio Saez Saez desarrollador web - junior</h1>
-    </header>
-    <nav>
-        <ol>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#proyectos">Proyectos realizados</a></li>
-            <li><a href="#lenguajes">Lenguajes</a></li>
-            <li><a href="#frameworks">Frameworks</a></li>
-        </ol>
-    </nav>
-    <main>
-        <section>
-            <div> 
-                <img class="foto-perfil" src="imagenes/Airon.jpeg" alt="Airon">
-            </div> 
-        </section>
+  <a class="sr-only" href="#contenido">Saltar al contenido</a>
 
-        <section>
-            <h2>Sobre mí</h2>
-            <p>Soy un desarrollador web junior con experiencia en HTML, CSS y JavaScript. Me apasiona crear sitios web atractivos y funcionales.</p>
-        </section>
+  <nav aria-label="Principal">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio">Airon Sáez</a>
+      <ul class="nav">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">🌓</button>
+    </div>
+  </nav>
 
-        <section>
-            <h2>proyectos realizados</h1>
-            <ol>
-                <li>
-                    <p>Tic Tac Toe con websockets</p>
-                    <img src="" alt="">
-                </li>
-                <li>
-                    <p>Guerra Naval</p>
-                    <img src="" alt="">
-                </li>
-                <li>
-                    <p>Apliaciones web</p>
-                    <img src="" alt="">
-                </li>
-            </ol>
-        </section>
+  <header id="inicio" class="hero container">
+    <h1>Airon Mauricio Sáez Sáez — Desarrollador Web Junior</h1>
+    <img
+      class="foto-perfil"
+      src="images/Airon.jpeg"
+      width="160"
+      height="160"
+      alt="Fotografía de Airon Sáez"
+      loading="eager"
+    />
+  </header>
 
-        <section>
-            <h2>lenguajes</h1>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-        </section>
+  <main id="contenido">
+    <section id="sobre-mi" class="section container" aria-labelledby="tit-sobre-mi">
+      <h2 id="tit-sobre-mi">Sobre mí</h2>
+      <p>Soy desarrollador web junior con experiencia en HTML, CSS, JavaScript y React. Me enfoco en construir interfaces accesibles, limpias y con buenas prácticas.</p>
+      <p>Me interesan el <strong>tiempo real</strong> con Socket.io, la <strong>automatización</strong> y el <strong>diseño centrado en el usuario</strong>.</p>
+    </section>
 
-        <section>
-            <h2>Frameworks</h1>
-            <ul>
-                <li>Flask</li>
-                <li>Bootstrap</li>
-                <li>React</li>
-                <li>Node.js</li>
-            </ul>
-        </section>
-        
-    </main>
-    <footer> About </footer>
-    
+    <section id="proyectos" class="section container" aria-labelledby="tit-proyectos">
+      <h2 id="tit-proyectos">Proyectos</h2>
+
+      <div class="grid-proyectos">
+        <article class="proyecto">
+          <h3>Tic Tac Toe en tiempo real</h3>
+          <p>Juego multijugador con <strong>Socket.io</strong>, lobby por salas y persistencia de estado.</p>
+          <div class="video-container" aria-label="Demo de Tic Tac Toe">
+            <video controls preload="metadata" poster="images/tic-tac-toe-poster.jpg">
+              <source src="videos/tic-tac-toe.mp4" type="video/mp4" />
+              Tu navegador no soporta video HTML5.
+            </video>
+          </div>
+          <p class="links">
+            <a href="https://github.com/tuusuario/tictactoe" target="_blank" rel="noopener">Código</a>
+            <a href="#" target="_blank" rel="noopener">Demo</a>
+          </p>
+        </article>
+
+        <article class="proyecto">
+          <h3>Guerra Naval</h3>
+          <p>Implementación en JS: lógica de turnos, validación de disparos y detección de hundimientos.</p>
+          <div class="video-container" aria-label="Demo de Guerra Naval">
+            <video controls preload="metadata" poster="images/guerra-naval-poster.jpg">
+              <source src="videos/guerra-naval.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <p class="links">
+            <a href="https://github.com/tuusuario/guerra-naval" target="_blank" rel="noopener">Código</a>
+          </p>
+        </article>
+
+        <article class="proyecto">
+          <h3>Dashboard de Ventas (Mock)</h3>
+          <p>Panel responsive con filtros y gráficos (Recharts). Maquetación accesible y semántica.</p>
+          <img src="images/dashboard.jpg" alt="Captura de un dashboard de ventas" loading="lazy" />
+          <p class="links">
+            <a href="https://github.com/tuusuario/dashboard-ventas" target="_blank" rel="noopener">Código</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section container" aria-labelledby="tit-skills">
+      <h2 id="tit-skills">Habilidades</h2>
+      <ul class="skills">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li>
+        <li>Node.js</li><li>Python</li><li>Flask</li><li>Bootstrap</li>
+        <li>Socket.io</li><li>SQL básico</li>
+      </ul>
+    </section>
+
+    <section id="contacto" class="section container" aria-labelledby="tit-contacto">
+      <h2 id="tit-contacto">Contacto</h2>
+      <p>¿Construimos algo juntos? Escríbeme a <a href="mailto:tuemail@correo.com">tuemail@correo.com</a></p>
+      <p>
+        <a href="https://www.linkedin.com/in/tuusuario" target="_blank" rel="noopener">LinkedIn</a> •
+        <a href="https://github.com/tuusuario" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; 2025 Airon Sáez. Todos los derechos reservados.</small>
+  </footer>
+
+  <button class="fab" type="button" data-scroll="#contacto">Contacto</button>
+
+  <script src="main.js" defer></script>
 </body>
 </html>

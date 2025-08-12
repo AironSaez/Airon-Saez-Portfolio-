@@ -9,106 +9,179 @@
 <body>
   <a class="sr-only" href="#contenido">Saltar al contenido</a>
 
-  <nav aria-label="Principal">
-    <div class="container nav-wrap">
-      <a class="brand" href="#inicio">Airon Sáez</a>
-      <ul class="nav">
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">🌓</button>
-    </div>
-  </nav>
+  <!-- Navegación superior -->
+  <header class="topbar">
+    <div class="wrap">
+      <a class="logo" href="#inicio" aria-label="Ir al inicio">A.</a>
 
-  <header id="inicio" class="hero container">
-    <h1>Airon Mauricio Sáez Sáez — Desarrollador Web Junior</h1>
-    <img
-      class="foto-perfil"
-      src="images/Airon.jpeg"
-      width="160"
-      height="160"
-      alt="Fotografía de Airon Sáez"
-      loading="eager"
-    />
+      <nav class="nav" aria-label="Principal">
+        <button id="menuToggle" class="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
+        <ul id="menu" class="menu">
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <h1 class="display">Airon Sáez</h1>
+        <p class="kicker">Desarrollador Web Junior</p>
+        <p class="lead">
+          Construyo interfaces claras, humanas y mantenibles. Me gusta el tiempo real con Socket.io,
+          la automatización y los pequeños detalles que elevan la experiencia.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn btn-ghost" href="#contacto">Hablemos</a>
+        </div>
+      </div>
+
+      <figure class="hero-media">
+        <img src="images/Airon.jpeg" alt="Foto de Airon Sáez" width="520" height="520" />
+        <figcaption>Disponible para proyectos freelance y prácticas.</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <main id="contenido">
-    <section id="sobre-mi" class="section container" aria-labelledby="tit-sobre-mi">
-      <h2 id="tit-sobre-mi">Sobre mí</h2>
-      <p>Soy desarrollador web junior con experiencia en HTML, CSS, JavaScript y React. Me enfoco en construir interfaces accesibles, limpias y con buenas prácticas.</p>
-      <p>Me interesan el <strong>tiempo real</strong> con Socket.io, la <strong>automatización</strong> y el <strong>diseño centrado en el usuario</strong>.</p>
-    </section>
-
-    <section id="proyectos" class="section container" aria-labelledby="tit-proyectos">
-      <h2 id="tit-proyectos">Proyectos</h2>
-
-      <div class="grid-proyectos">
-        <article class="proyecto">
-          <h3>Tic Tac Toe en tiempo real</h3>
-          <p>Juego multijugador con <strong>Socket.io</strong>, lobby por salas y persistencia de estado.</p>
-          <div class="video-container" aria-label="Demo de Tic Tac Toe">
-            <video controls preload="metadata" poster="images/tic-tac-toe-poster.jpg">
-              <source src="videos/tic-tac-toe.mp4" type="video/mp4" />
-              Tu navegador no soporta video HTML5.
-            </video>
-          </div>
-          <p class="links">
-            <a href="https://github.com/tuusuario/tictactoe" target="_blank" rel="noopener">Código</a>
-            <a href="#" target="_blank" rel="noopener">Demo</a>
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="section">
+      <div class="wrap grid-2">
+        <header class="sec-head">
+          <h2>Sobre mí</h2>
+        </header>
+        <div class="sec-body">
+          <p>
+            Soy desarrollador web junior con enfoque en <strong>JavaScript</strong>, <strong>React</strong> y
+            <strong>Node.js</strong>. Disfruto convertir requisitos ambiguos en soluciones simples
+            con buen diseño de componentes y accesibilidad real.
           </p>
-        </article>
-
-        <article class="proyecto">
-          <h3>Guerra Naval</h3>
-          <p>Implementación en JS: lógica de turnos, validación de disparos y detección de hundimientos.</p>
-          <div class="video-container" aria-label="Demo de Guerra Naval">
-            <video controls preload="metadata" poster="images/guerra-naval-poster.jpg">
-              <source src="videos/guerra-naval.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <p class="links">
-            <a href="https://github.com/tuusuario/guerra-naval" target="_blank" rel="noopener">Código</a>
+          <p>
+            Actualmente exploro <em>tiempo real</em> (Socket.io), automatización con scripts y diseño
+            centrado en tareas. Busco equipos donde pueda aprender rápido y aportar valor desde el día uno.
           </p>
-        </article>
-
-        <article class="proyecto">
-          <h3>Dashboard de Ventas (Mock)</h3>
-          <p>Panel responsive con filtros y gráficos (Recharts). Maquetación accesible y semántica.</p>
-          <img src="images/dashboard.jpg" alt="Captura de un dashboard de ventas" loading="lazy" />
-          <p class="links">
-            <a href="https://github.com/tuusuario/dashboard-ventas" target="_blank" rel="noopener">Código</a>
-          </p>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section id="skills" class="section container" aria-labelledby="tit-skills">
-      <h2 id="tit-skills">Habilidades</h2>
-      <ul class="skills">
-        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li>
-        <li>Node.js</li><li>Python</li><li>Flask</li><li>Bootstrap</li>
-        <li>Socket.io</li><li>SQL básico</li>
-      </ul>
+    <!-- Proyectos -->
+    <section id="proyectos" class="section">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2>Proyectos</h2>
+          <div class="filters" role="tablist" aria-label="Filtrar proyectos">
+            <button class="chip is-active" role="tab" aria-selected="true" data-filter="all">Todos</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="tiempo-real">Tiempo real</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="juegos">JS / Juegos</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="interfaces">Interfaces</button>
+          </div>
+        </header>
+
+        <div class="cards" id="gridProyectos">
+          <!-- Proyecto 1 -->
+          <article class="card" data-tags="tiempo-real">
+            <div class="card-media">
+              <video controls preload="metadata" poster="images/tic-tac-toe-poster.jpg">
+                <source src="videos/tic-tac-toe.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Tic Tac Toe en tiempo real</h3>
+              <p class="card-text">
+                Multijugador con <strong>Socket.io</strong>, salas y persistencia de estado.
+              </p>
+              <div class="card-actions">
+                <a class="btn btn-ghost" href="https://github.com/tuusuario/tictactoe" target="_blank" rel="noopener">Código</a>
+                <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="card" data-tags="juegos">
+            <div class="card-media">
+              <img src="images/guerra-naval-poster.jpg" alt="Tablero de Guerra Naval" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Guerra Naval (JS puro)</h3>
+              <p class="card-text">
+                Lógica de turnos, validación de disparos y detección de hundimientos.
+              </p>
+              <div class="card-actions">
+                <a class="btn btn-ghost" href="https://github.com/tuusuario/guerra-naval" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="card" data-tags="interfaces">
+            <div class="card-media">
+              <img src="images/dashboard.jpg" alt="Dashboard de ventas" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Dashboard de Ventas (Mock)</h3>
+              <p class="card-text">
+                Panel responsive con filtros y gráficos. Maquetación accesible y ordenada.
+              </p>
+              <div class="card-actions">
+                <a class="btn btn-ghost" href="https://github.com/tuusuario/dashboard-ventas" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="contacto" class="section container" aria-labelledby="tit-contacto">
-      <h2 id="tit-contacto">Contacto</h2>
-      <p>¿Construimos algo juntos? Escríbeme a <a href="mailto:tuemail@correo.com">tuemail@correo.com</a></p>
-      <p>
-        <a href="https://www.linkedin.com/in/tuusuario" target="_blank" rel="noopener">LinkedIn</a> •
-        <a href="https://github.com/tuusuario" target="_blank" rel="noopener">GitHub</a>
-      </p>
+    <!-- Habilidades -->
+    <section id="skills" class="section">
+      <div class="wrap grid-2">
+        <header class="sec-head">
+          <h2>Habilidades</h2>
+        </header>
+        <div class="sec-body">
+          <ul class="pill-list">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li>
+            <li>Node.js</li><li>Socket.io</li><li>Python</li><li>Flask</li>
+            <li>Bootstrap</li><li>SQL básico</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+      <div class="wrap grid-2">
+        <header class="sec-head">
+          <h2>Contacto</h2>
+        </header>
+        <div class="sec-body">
+          <p>¿Construimos algo juntos? Escríbeme:</p>
+          <p class="contact-links">
+            <a class="btn btn-primary" href="mailto:tuemail@correo.com">tuemail@correo.com</a>
+            <span class="sep"></span>
+            <a class="link" href="https://www.linkedin.com/in/tuusuario" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="sep">•</span>
+            <a class="link" href="https://github.com/tuusuario" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <small>&copy; 2025 Airon Sáez. Todos los derechos reservados.</small>
+    <div class="wrap">
+      <small>© 2025 Airon Sáez. Hecho a mano.</small>
+      <button class="to-top" data-scroll="#inicio" aria-label="Volver arriba">↑</button>
+    </div>
   </footer>
 
-  <button class="fab" type="button" data-scroll="#contacto">Contacto</button>
-
-  <script src="main.js" defer></script>
+  <script src="main.js"></script>
 </body>
 </html>

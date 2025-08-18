@@ -204,3 +204,102 @@ body{
 @media (prefers-reduced-motion: reduce){
   *{ animation:none !important; transition:none !important; scroll-behavior:auto !important; }
 }
+
+.social-links {
+  margin-top: 1rem;
+
+}
+
+.social-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;   /* tamaño del botón */
+  height: 60px;
+  border-radius: 50%; /* forma circular */
+  transition: transform 0.2s ease;
+}
+
+/* LinkedIn oficial */
+.social-links a[title="LinkedIn"] {
+  background-color: #0A66C2; /* fondo azul LinkedIn */
+  color: #fff; /* ícono blanco */
+  font-size: 32px;
+}
+
+/* GitHub oficial */
+.social-links a[title="GitHub"] {
+  background-color: #fff;   /* círculo blanco */
+  color: #181717;           /* logo negro */
+  font-size: 32px;
+}
+
+/* Hover */
+.social-links a:hover {
+  transform: scale(1.15);
+}
+
+
+
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contact-lead {
+  font-size: 1.08rem;
+  color: var(--muted);
+  margin: 0 0 6px 0;
+}
+.contact-mailbox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.contact-mail {
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: .2px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.contact-actions {
+  margin-top: 4px;
+}
+.contact-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.social-links {
+  margin-top: 0;
+  gap: 18px;
+}
+.social-links a {
+  width: 54px;
+  height: 54px;
+  font-size: 32px;
+  margin: 0 10px 0 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+.social-links a[title="LinkedIn"] {
+  background-color: #0A66C2;
+  color: #fff;
+}
+.social-links a[title="GitHub"] {
+  background-color: #fff;
+  color: #181717;
+}
+.social-links a:hover {
+  transform: scale(1.15);
+  box-shadow: 0 2px 12px rgba(245,158,11,.18);
+}

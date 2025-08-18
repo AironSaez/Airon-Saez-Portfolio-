@@ -4,7 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Airon Sáez — Portafolio</title>
+
+  <!-- Estilos propios -->
   <link rel="stylesheet" href="index.css" />
+
+  <!-- Íconos oficiales de tecnologías (Devicon) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 <body>
   <a class="sr-only" href="#contenido">Saltar al contenido</a>
@@ -16,17 +21,17 @@
       <nav class="nav" aria-label="Principal">
         <button id="menuToggle" class="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
         <ul id="menu" class="menu">
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#skills">Habilidades</a></li>
           <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#educacion">Educación</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- yo -->
+  <!-- Hero -->
   <section id="inicio" class="hero">
     <div class="wrap hero-grid">
       <div class="hero-text">
@@ -50,22 +55,74 @@
   </section>
 
   <main id="contenido">
-    <!-- Sección "Sobre mí" -->
-    <section id="sobre-mi" class="section">
-      <div class="wrap grid-2">
+    <!-- Experiencia Laboral -->
+    <section id="experiencia" class="section">
+      <div class="wrap">
         <header class="sec-head">
-          <h2>Sobre mí</h2>
+          <h2>Experiencia Laboral</h2>
         </header>
         <div class="sec-body">
-          <p>
-            Soy desarrollador web junior con enfoque en <strong>JavaScript</strong>, <strong>React</strong> y
-            <strong>Node.js</strong>. Disfruto convertir requisitos ambiguos en soluciones simples
-            con buen diseño de componentes y accesibilidad real.
-          </p>
-          <p>
-            Actualmente exploro <em>tiempo real</em> (Socket.io), automatización con scripts y diseño
-            centrado en tareas. Busco equipos donde pueda aprender rápido y aportar valor desde el día uno.
-          </p>
+          <div class="timeline">
+            <article class="job">
+              <h3>Analista de Acreditación y Gestión de Personal</h3>
+              <p class="job-meta">Empresa XYZ — 2022 - Presente</p>
+              <p class="job-desc">
+                Gestión de procesos administrativos de acreditación y control de personal.
+                Implementación de reportes automatizados en Excel y SQL para seguimiento de indicadores.
+              </p>
+            </article>
+            <article class="job">
+              <h3>Asistente Administrativo</h3>
+              <p class="job-meta">Empresa ABC — 2020 - 2022</p>
+              <p class="job-desc">
+                Apoyo en tareas de backoffice, digitalización de documentos y
+                coordinación con distintas áreas para mantener flujos de trabajo eficientes.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="skills" class="section">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2>Habilidades</h2>
+        </header>
+        <div class="sec-body grid-3">
+          <!-- Lenguajes -->
+          <div class="skill-box">
+            <h3>Lenguajes</h3>
+            <ul class="pill-list">
+              <li><i class="devicon-html5-plain colored" style="font-size:40px"></i> HTML</li>
+              <li><i class="devicon-css3-plain colored" style="font-size:40px"></i> CSS</li>
+              <li><i class="devicon-javascript-plain colored" style="font-size:40px"></i> JavaScript</li>
+              <li><i class="devicon-python-plain colored" style="font-size:40px"></i> Python</li>
+              <li><i class="devicon-sqlite-plain colored" style="font-size:40px"></i> SQL</li>
+            </ul>
+          </div>
+
+          <!-- Frameworks -->
+          <div class="skill-box">
+            <h3>Frameworks</h3>
+            <ul class="pill-list">
+              <li><i class="devicon-react-original colored" style="font-size:40px"></i> React</li>
+              <li><i class="devicon-nodejs-plain colored" style="font-size:40px"></i> Node.js</li>
+              <li><i class="devicon-socketio-original" style="font-size:40px"></i> Socket.io</li>
+              <li><i class="devicon-bootstrap-plain colored" style="font-size:40px"></i> Bootstrap</li>
+            </ul>
+          </div>
+
+          <!-- Herramientas -->
+          <div class="skill-box">
+            <h3>Herramientas</h3>
+            <ul class="pill-list">
+              <li><i class="devicon-git-plain colored" style="font-size:40px"></i> Git</li>
+              <li><i class="devicon-github-original" style="font-size:40px"></i> GitHub</li>
+              
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -79,7 +136,7 @@
 
         <div class="cards" id="gridProyectos">
           <!-- Proyecto 1 -->
-          <article class="card" data-tags="tiempo-real">
+          <article class="card">
             <div class="card-media">
               <video controls preload="metadata" poster="images/tic-tac-toe-poster.jpg">
                 <source src="videos/tic-tac-toe.mp4" type="video/mp4" />
@@ -88,35 +145,36 @@
             <div class="card-body">
               <h3 class="card-title">Tic Tac Toe en tiempo real</h3>
               <p class="card-text">
-                Multijugador con <strong>Socket.io</strong>, salas y persistencia de estado.
+                Juego multijugador con salas y persistencia. Implementé asignación estable de X/O y
+                reconexión sin duplicar turnos.
               </p>
-              <ul class="meta-list">
-                <li><strong>Rol:</strong> Fullstack</li>
-                <li><strong>Stack:</strong> Next.js, TS, Socket.io, SQLite</li>
-                <li><strong>Reto:</strong> reconexión y turnos sin duplicación</li>
+              <ul class="tech-list" aria-label="Tecnologías utilizadas">
+                <li><i class="devicon-nextjs-original-wordmark" style="font-size:40px"></i></li>
+                <li><i class="devicon-typescript-plain colored" style="font-size:40px"></i></li>
+                <li><i class="devicon-socketio-original" style="font-size:40px"></i></li>
+                <li><i class="devicon-sqlite-plain colored" style="font-size:40px"></i></li>
               </ul>
               <div class="card-actions">
-                <button class="btn btn-ghost" type="button" data-case="tictactoe">Ver caso</button>
                 <a class="btn btn-ghost" href="https://github.com/tuusuario/tictactoe" target="_blank" rel="noopener">Código</a>
-                <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Demo</a>
               </div>
             </div>
           </article>
 
           <!-- Proyecto 2 -->
-          <article class="card" data-tags="juegos">
+          <article class="card">
             <div class="card-media">
               <img src="images/guerra-naval-poster.jpg" alt="Tablero de Guerra Naval" />
             </div>
             <div class="card-body">
               <h3 class="card-title">Guerra Naval (JS puro)</h3>
               <p class="card-text">
-                Lógica de turnos, validación de disparos y detección de hundimientos.
+                Prototipo de juego por turnos con validación de disparos y colocación de embarcaciones
+                responsiva.
               </p>
-              <ul class="meta-list">
-                <li><strong>Rol:</strong> Frontend</li>
-                <li><strong>Stack:</strong> HTML, CSS, JS</li>
-                <li><strong>Reto:</strong> colisiones y layout responsive del tablero</li>
+              <ul class="tech-list" aria-label="Tecnologías utilizadas">
+                <li><i class="devicon-html5-plain colored" style="font-size:40px"></i></li>
+                <li><i class="devicon-css3-plain colored" style="font-size:40px"></i></li>
+                <li><i class="devicon-javascript-plain colored" style="font-size:40px"></i></li>
               </ul>
               <div class="card-actions">
                 <a class="btn btn-ghost" href="https://github.com/tuusuario/guerra-naval" target="_blank" rel="noopener">Código</a>
@@ -125,19 +183,19 @@
           </article>
 
           <!-- Proyecto 3 -->
-          <article class="card" data-tags="interfaces">
+          <article class="card">
             <div class="card-media">
               <img src="images/dashboard.jpg" alt="Dashboard de ventas" />
             </div>
             <div class="card-body">
               <h3 class="card-title">Dashboard de Ventas (Mock)</h3>
               <p class="card-text">
-                Panel responsive con filtros y gráficos. Maquetación accesible y ordenada.
+                Panel responsive con filtros y estructura accesible orientada a lectura rápida de indicadores.
               </p>
-              <ul class="meta-list">
-                <li><strong>Rol:</strong> Frontend</li>
-                <li><strong>Stack:</strong> HTML, CSS, JS</li>
-                <li><strong>Reto:</strong> accesibilidad + estructura semántica</li>
+              <ul class="tech-list" aria-label="Tecnologías utilizadas">
+                <li><i class="devicon-html5-plain colored" style="font-size:40px"></i></li>
+                <li><i class="devicon-css3-plain colored" style="font-size:40px"></i></li>
+                <li><i class="devicon-javascript-plain colored" style="font-size:40px"></i></li>
               </ul>
               <div class="card-actions">
                 <a class="btn btn-ghost" href="https://github.com/tuusuario/dashboard-ventas" target="_blank" rel="noopener">Código</a>
@@ -146,19 +204,19 @@
           </article>
 
           <!-- Proyecto 4 -->
-          <article class="card" data-tags="automatizacion interfaces">
+          <article class="card">
             <div class="card-media">
               <img src="images/n8n-poster.jpg" alt="Flujo de automatización en n8n" />
             </div>
             <div class="card-body">
               <h3 class="card-title">Automatización n8n para PYMEs</h3>
               <p class="card-text">
-                Integración de correo + planillas para registrar pedidos y enviar confirmaciones automáticas.
+                Flujo que integra correo y planillas para registrar pedidos y enviar confirmaciones
+                automáticas con validación y reintentos.
               </p>
-              <ul class="meta-list">
-                <li><strong>Rol:</strong> Integrador</li>
-                <li><strong>Stack:</strong> n8n, Webhooks, Google Sheets</li>
-                <li><strong>Reto:</strong> reintentos y validación de datos</li>
+              <ul class="tech-list" aria-label="Tecnologías utilizadas">
+                <li><img src="https://n8n.io/favicon-32x32.png" alt="n8n" width="40" height="40" /></li>
+                <li><i class="devicon-google-plain colored" style="font-size:40px"></i></li>
               </ul>
               <div class="card-actions">
                 <a class="btn btn-ghost" href="https://github.com/tuusuario/n8n-flujos" target="_blank" rel="noopener">Código</a>
@@ -169,47 +227,18 @@
       </div>
     </section>
 
-    <!-- Habilidades -->
-    <section id="skills" class="section">
-      <div class="wrap grid-2">
-        <header class="sec-head">
-          <h2>Habilidades</h2>
-        </header>
-        <div class="sec-body">
-          <ul class="pill-list">
-            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li>
-            <li>Node.js</li><li>Socket.io</li><li>Python</li><li>Flask</li>
-            <li>Bootstrap</li><li>SQL básico</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experiencia Laboral -->
-    <section id="experiencia" class="section">
+    <!-- Educación -->
+    <section id="educacion" class="section">
       <div class="wrap">
         <header class="sec-head">
-          <h2>Experiencia Laboral</h2>
+          <h2>Educación</h2>
         </header>
         <div class="sec-body">
-          <div class="timeline">
-            <article class="job">
-              <h3>Analista de Acreditación y Gestión de Personal</h3>
-              <p class="job-meta">Empresa XYZ — 2022 - Presente</p>
-              <p class="job-desc">
-                Gestión de procesos administrativos de acreditación y control de personal. 
-                Implementación de reportes automatizados en Excel y SQL para seguimiento de indicadores.
-              </p>
-            </article>
-            <article class="job">
-              <h3>Asistente Administrativo</h3>
-              <p class="job-meta">Empresa ABC — 2020 - 2022</p>
-              <p class="job-desc">
-                Apoyo en tareas de backoffice, digitalización de documentos y 
-                coordinación con distintas áreas para mantener flujos de trabajo eficientes.
-              </p>
-            </article>
-          </div>
+          <article class="edu">
+            <h3>Contabilidad y Finanzas</h3>
+            <p class="edu-meta">Duoc UC — En curso</p>
+            <p class="edu-desc">Formación en contabilidad financiera, tributaria y sistemas de información.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -237,26 +266,7 @@
     </section>
   </main>
 
-  <!-- Modal de caso -->
-  <div class="modal" id="modal-caso" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal__dialog" role="document">
-      <header class="modal__head">
-        <h3 id="modal-title" class="modal__title">Caso: Tic Tac Toe</h3>
-        <button class="modal__close" type="button" aria-label="Cerrar">×</button>
-      </header>
-      <div class="modal__body">
-        <p><strong>Contexto:</strong> Juego multijugador con salas y reconexión. Problema: mantener el rol (X/O) sin duplicación y sincronizar los turnos.</p>
-        <p><strong>Qué hice:</strong> asignación determinista de roles por sala, guardado de estado en SQLite y limpieza automática por inactividad.</p>
-        <p><strong>Resultado:</strong> partidas persistentes, reconexión segura y UX clara (sin “reingresaste” en primera conexión).</p>
-      </div>
-      <footer class="modal__foot">
-        <a class="btn btn-ghost" href="https://github.com/tuusuario/tictactoe" target="_blank" rel="noopener">Ver código</a>
-        <button class="btn btn-primary" type="button" data-close-modal>Cerrar</button>
-      </footer>
-    </div>
-    <div class="modal__backdrop" data-close-modal></div>
-  </div>
-
+  <!-- Scripts -->
   <script src="main.js"></script>
 </body>
 </html>

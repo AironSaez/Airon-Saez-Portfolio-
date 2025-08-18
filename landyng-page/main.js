@@ -44,28 +44,7 @@ document.addEventListener('click', (e) => {
   if (target) target.scrollIntoView({ behavior: 'smooth' });
 });
 
-// ------- Filtros de proyectos -------
-const chipButtons = Array.from(document.querySelectorAll('.chip[data-filter]'));
-const cards = Array.from(document.querySelectorAll('.card[data-tags]'));
 
-function setFilter(tag) {
-  chipButtons.forEach(b => {
-    const isActive = b.dataset.filter === tag || (tag === 'all' && b.dataset.filter === 'all');
-    b.classList.toggle('is-active', isActive);
-    b.setAttribute('aria-selected', isActive ? 'true' : 'false');
-  });
-  cards.forEach(card => {
-    const ok = tag === 'all' || (card.dataset.tags || '').includes(tag);
-    card.style.display = ok ? '' : 'none';
-  });
-}
-
-chipButtons.forEach(btn => {
-  btn.addEventListener('click', () => setFilter(btn.dataset.filter));
-});
-
-// Estado inicial
-setFilter('all');
 
 // ------- Lazy para imágenes sin atributo loading -------
 document.querySelectorAll('img:not([loading])').forEach(img => img.loading = 'lazy');

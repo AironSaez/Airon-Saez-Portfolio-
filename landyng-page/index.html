@@ -12,14 +12,14 @@
   <!-- Navegación superior -->
   <header class="topbar">
     <div class="wrap">
-      <a class="logo" href="#inicio" aria-label="Ir al inicio">A.</a>
-
+      <a class="logo logo-badge" href="#inicio" aria-label="Ir al inicio">AS</a>
       <nav class="nav" aria-label="Principal">
         <button id="menuToggle" class="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
         <ul id="menu" class="menu">
           <li><a href="#sobre-mi">Sobre mí</a></li>
           <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -45,13 +45,12 @@
 
       <figure class="hero-media">
         <img src="images/Airon.jpeg" alt="Foto de Airon Sáez" width="520" height="520" />
-        <figcaption>Disponible para proyectos freelance y prácticas.</figcaption>
       </figure>
     </div>
   </section>
 
   <main id="contenido">
-    <!-- Sobre mí -->
+    <!-- Sección "Sobre mí" -->
     <section id="sobre-mi" class="section">
       <div class="wrap grid-2">
         <header class="sec-head">
@@ -81,6 +80,7 @@
             <button class="chip" role="tab" aria-selected="false" data-filter="tiempo-real">Tiempo real</button>
             <button class="chip" role="tab" aria-selected="false" data-filter="juegos">JS / Juegos</button>
             <button class="chip" role="tab" aria-selected="false" data-filter="interfaces">Interfaces</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="automatizacion">Automatización</button>
           </div>
         </header>
 
@@ -97,7 +97,13 @@
               <p class="card-text">
                 Multijugador con <strong>Socket.io</strong>, salas y persistencia de estado.
               </p>
+              <ul class="meta-list">
+                <li><strong>Rol:</strong> Fullstack</li>
+                <li><strong>Stack:</strong> Next.js, TS, Socket.io, SQLite</li>
+                <li><strong>Reto:</strong> reconexión y turnos sin duplicación</li>
+              </ul>
               <div class="card-actions">
+                <button class="btn btn-ghost" type="button" data-case="tictactoe">Ver caso</button>
                 <a class="btn btn-ghost" href="https://github.com/tuusuario/tictactoe" target="_blank" rel="noopener">Código</a>
                 <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Demo</a>
               </div>
@@ -114,6 +120,11 @@
               <p class="card-text">
                 Lógica de turnos, validación de disparos y detección de hundimientos.
               </p>
+              <ul class="meta-list">
+                <li><strong>Rol:</strong> Frontend</li>
+                <li><strong>Stack:</strong> HTML, CSS, JS</li>
+                <li><strong>Reto:</strong> colisiones y layout responsive del tablero</li>
+              </ul>
               <div class="card-actions">
                 <a class="btn btn-ghost" href="https://github.com/tuusuario/guerra-naval" target="_blank" rel="noopener">Código</a>
               </div>
@@ -130,8 +141,34 @@
               <p class="card-text">
                 Panel responsive con filtros y gráficos. Maquetación accesible y ordenada.
               </p>
+              <ul class="meta-list">
+                <li><strong>Rol:</strong> Frontend</li>
+                <li><strong>Stack:</strong> HTML, CSS, JS</li>
+                <li><strong>Reto:</strong> accesibilidad + estructura semántica</li>
+              </ul>
               <div class="card-actions">
                 <a class="btn btn-ghost" href="https://github.com/tuusuario/dashboard-ventas" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 4 -->
+          <article class="card" data-tags="automatizacion interfaces">
+            <div class="card-media">
+              <img src="images/n8n-poster.jpg" alt="Flujo de automatización en n8n" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Automatización n8n para PYMEs</h3>
+              <p class="card-text">
+                Integración de correo + planillas para registrar pedidos y enviar confirmaciones automáticas.
+              </p>
+              <ul class="meta-list">
+                <li><strong>Rol:</strong> Integrador</li>
+                <li><strong>Stack:</strong> n8n, Webhooks, Google Sheets</li>
+                <li><strong>Reto:</strong> reintentos y validación de datos</li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-ghost" href="https://github.com/tuusuario/n8n-flujos" target="_blank" rel="noopener">Código</a>
               </div>
             </div>
           </article>
@@ -155,6 +192,35 @@
       </div>
     </section>
 
+    <!-- Experiencia Laboral -->
+    <section id="experiencia" class="section">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2>Experiencia Laboral</h2>
+        </header>
+        <div class="sec-body">
+          <div class="timeline">
+            <article class="job">
+              <h3>Analista de Acreditación y Gestión de Personal</h3>
+              <p class="job-meta">Empresa XYZ — 2022 - Presente</p>
+              <p class="job-desc">
+                Gestión de procesos administrativos de acreditación y control de personal. 
+                Implementación de reportes automatizados en Excel y SQL para seguimiento de indicadores.
+              </p>
+            </article>
+            <article class="job">
+              <h3>Asistente Administrativo</h3>
+              <p class="job-meta">Empresa ABC — 2020 - 2022</p>
+              <p class="job-desc">
+                Apoyo en tareas de backoffice, digitalización de documentos y 
+                coordinación con distintas áreas para mantener flujos de trabajo eficientes.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contacto -->
     <section id="contacto" class="section">
       <div class="wrap grid-2">
@@ -164,8 +230,11 @@
         <div class="sec-body">
           <p>¿Construimos algo juntos? Escríbeme:</p>
           <p class="contact-links">
-            <a class="btn btn-primary" href="mailto:tuemail@correo.com">tuemail@correo.com</a>
-            <span class="sep"></span>
+            <a class="btn btn-primary" href="mailto:tuemail@correo.com" id="correo">tuemail@correo.com</a>
+            <button class="btn btn-ghost" type="button" data-copy="#correo" aria-label="Copiar correo">Copiar</button>
+            <span class="sep">•</span>
+            <a class="link" href="CV_Airon_Saez.pdf" target="_blank" rel="noopener">Descargar CV</a>
+            <span class="sep">•</span>
             <a class="link" href="https://www.linkedin.com/in/tuusuario" target="_blank" rel="noopener">LinkedIn</a>
             <span class="sep">•</span>
             <a class="link" href="https://github.com/tuusuario" target="_blank" rel="noopener">GitHub</a>
@@ -175,12 +244,25 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <small>© 2025 Airon Sáez. Hecho a mano.</small>
-      <button class="to-top" data-scroll="#inicio" aria-label="Volver arriba">↑</button>
+  <!-- Modal de caso -->
+  <div class="modal" id="modal-caso" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__dialog" role="document">
+      <header class="modal__head">
+        <h3 id="modal-title" class="modal__title">Caso: Tic Tac Toe</h3>
+        <button class="modal__close" type="button" aria-label="Cerrar">×</button>
+      </header>
+      <div class="modal__body">
+        <p><strong>Contexto:</strong> Juego multijugador con salas y reconexión. Problema: mantener el rol (X/O) sin duplicación y sincronizar los turnos.</p>
+        <p><strong>Qué hice:</strong> asignación determinista de roles por sala, guardado de estado en SQLite y limpieza automática por inactividad.</p>
+        <p><strong>Resultado:</strong> partidas persistentes, reconexión segura y UX clara (sin “reingresaste” en primera conexión).</p>
+      </div>
+      <footer class="modal__foot">
+        <a class="btn btn-ghost" href="https://github.com/tuusuario/tictactoe" target="_blank" rel="noopener">Ver código</a>
+        <button class="btn btn-primary" type="button" data-close-modal>Cerrar</button>
+      </footer>
     </div>
-  </footer>
+    <div class="modal__backdrop" data-close-modal></div>
+  </div>
 
   <script src="main.js"></script>
 </body>

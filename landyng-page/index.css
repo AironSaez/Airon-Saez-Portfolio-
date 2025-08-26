@@ -116,7 +116,31 @@ body{
 .kicker{ color: var(--muted); margin:0 0 14px; }
 .lead{ margin:0 0 18px; max-width: 54ch; }
 
-.cta-row{ display:flex; gap: 10px; flex-wrap: wrap; }
+.cta-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 4px; /* Opcional, para que no se corte el scroll */
+}
+.cta-row .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: unset; /* Elimina la altura mínima */
+  padding: .7rem 1rem;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.cta-row img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 22px;
+  width: auto;
+}
+
 .btn{
   display:inline-block; border:1px solid var(--border); background: var(--surface);
   color: var(--ink); padding:.7rem 1rem; border-radius:12px; text-decoration:none;
@@ -138,6 +162,8 @@ body{
   box-shadow: 0 4px 14px rgba(0,0,0,.3);
 }
 .btn-ghost:hover{ background: var(--surface-2); }
+
+
 
 .hero-media{
   background: color-mix(in oklab, var(--surface) 88%, transparent 12%);

@@ -9,7 +9,7 @@
 <body>
   <a class="sr-only" href="#contenido">Saltar al contenido</a>
 
-  <!-- Navegación superior -->
+  <!--navbar-->
   <header class="topbar">
     <div class="wrap">
       <a class="logo logo-badge" href="#inicio" aria-label="Ir al inicio">AS</a>
@@ -26,7 +26,7 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!--Yo-->
   <section id="inicio" class="hero">
     <div class="wrap hero-grid">
       <div class="hero-text">
@@ -39,7 +39,17 @@
 
         <div class="cta-row">
           <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
-          <a class="btn btn-ghost" href="#contacto">Hablemos</a>
+          <a class="btn btn-ghost" href="#">descargar CV
+            <img src="images/cv.png" alt="icono CV">
+          </a>
+          <a class="btn btn-ghost" href="#">GitHub
+            <img src="images/github.png" alt="Github icon">
+          </a>
+          <a class="btn btn-ghost" href="#">linkedin
+            <img src="images/linkedin.png" alt="Icono Linekdin">
+          </a>
+
+          
         </div>
       </div>
 
@@ -49,28 +59,53 @@
     </div>
   </section>
 
-  <main id="contenido">
-    <!-- Sección "Sobre mí" -->
-    <section id="sobre-mi" class="section">
-      <div class="wrap grid-2">
+      <!-- Experiencia Laboral -->
+    <section id="experiencia" class="section">
+      <div class="wrap">
         <header class="sec-head">
-          <h2>Sobre mí</h2>
+          <h2>Experiencia Laboral</h2>
         </header>
         <div class="sec-body">
-          <p>
-            Soy desarrollador web junior con enfoque en <strong>JavaScript</strong>, <strong>React</strong> y
-            <strong>Node.js</strong>. Disfruto convertir requisitos ambiguos en soluciones simples
-            con buen diseño de componentes y accesibilidad real.
-          </p>
-          <p>
-            Actualmente exploro <em>tiempo real</em> (Socket.io), automatización con scripts y diseño
-            centrado en tareas. Busco equipos donde pueda aprender rápido y aportar valor desde el día uno.
-          </p>
+          <div class="timeline">
+            <article class="job">
+              <h3>Analista de Acreditación y Gestión de Personal</h3>
+              <p class="job-meta">Empresa XYZ — 2022 - Presente</p>
+              <p class="job-desc">
+                Gestión de procesos administrativos de acreditación y control de personal. 
+                Implementación de reportes automatizados en Excel y SQL para seguimiento de indicadores.
+              </p>
+            </article>
+            <article class="job">
+              <h3>Asistente Administrativo</h3>
+              <p class="job-meta">Empresa ABC — 2020 - 2022</p>
+              <p class="job-desc">
+                Apoyo en tareas de backoffice, digitalización de documentos y 
+                coordinación con distintas áreas para mantener flujos de trabajo eficientes.
+              </p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Proyectos -->
+        <!--Habilidades-->
+    <section id="skills" class="section">
+      <div class="wrap grid-2">
+        <header class="sec-head">
+          <h2>Habilidades</h2>
+        </header>
+        <div class="sec-body">
+          <ul class="pill-list">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li>
+            <li>Node.js</li><li>Socket.io</li><li>Python</li><li>Flask</li>
+            <li>Bootstrap</li><li>SQL básico</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  <main id="contenido">
+    <!--Proyectos-->
     <section id="proyectos" class="section">
       <div class="wrap">
         <header class="sec-head">
@@ -176,50 +211,9 @@
       </div>
     </section>
 
-    <!-- Habilidades -->
-    <section id="skills" class="section">
-      <div class="wrap grid-2">
-        <header class="sec-head">
-          <h2>Habilidades</h2>
-        </header>
-        <div class="sec-body">
-          <ul class="pill-list">
-            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li>
-            <li>Node.js</li><li>Socket.io</li><li>Python</li><li>Flask</li>
-            <li>Bootstrap</li><li>SQL básico</li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
-    <!-- Experiencia Laboral -->
-    <section id="experiencia" class="section">
-      <div class="wrap">
-        <header class="sec-head">
-          <h2>Experiencia Laboral</h2>
-        </header>
-        <div class="sec-body">
-          <div class="timeline">
-            <article class="job">
-              <h3>Analista de Acreditación y Gestión de Personal</h3>
-              <p class="job-meta">Empresa XYZ — 2022 - Presente</p>
-              <p class="job-desc">
-                Gestión de procesos administrativos de acreditación y control de personal. 
-                Implementación de reportes automatizados en Excel y SQL para seguimiento de indicadores.
-              </p>
-            </article>
-            <article class="job">
-              <h3>Asistente Administrativo</h3>
-              <p class="job-meta">Empresa ABC — 2020 - 2022</p>
-              <p class="job-desc">
-                Apoyo en tareas de backoffice, digitalización de documentos y 
-                coordinación con distintas áreas para mantener flujos de trabajo eficientes.
-              </p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
+
+
 
     <!-- Contacto -->
     <section id="contacto" class="section">

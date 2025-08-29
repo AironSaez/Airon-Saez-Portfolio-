@@ -146,7 +146,11 @@ body{
   color: var(--ink); padding:.7rem 1rem; border-radius:12px; text-decoration:none;
   transition: background var(--dur), color var(--dur), border var(--dur), transform var(--dur), box-shadow var(--dur);
 }
-.btn:hover{ transform: translateY(-1px); }
+.btn:hover{ 
+  box-shadow: 0 4px 16px rgba(242,236,148,.18);
+  border-color: var(--primary);
+  background: var(--surface-2);
+ }
 .btn-primary{
   background: var(--primary); border-color: var(--primary); color:#0A0A0A;
   box-shadow: 0 6px 20px rgba(242,236,148,.25);
@@ -191,6 +195,9 @@ body{
   padding: 18px;
   box-shadow: var(--shadow);
   backdrop-filter: saturate(120%) blur(6px);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 /*Proyectos*/
@@ -306,4 +313,38 @@ body{
 /*Movimiento reducido*/
 @media (prefers-reduced-motion: reduce){
   *{ animation:none !important; transition:none !important; scroll-behavior:auto !important; }
+}
+
+
+/* ====== Skills Grid ====== */
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.skill-block{
+  background: color-mix(in oklab, var(--surface) 90%, transparent 10%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.skill-title{
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  letter-spacing: .2px;
+  color: var(--ink);
+}
+
+/* Reutiliza tu .pill-list existente; añade un pequeño ajuste opcional */
+.pill-list li{
+  /* ya tienes estilos base; puedes añadir: */
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .skills-grid{ grid-template-columns: 1fr; }
 }

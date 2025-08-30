@@ -185,8 +185,10 @@ body{
 }
 @media (max-width: 980px){ .grid-2{ grid-template-columns: 1fr; } }
 
-.sec-head h2{
-  font-size: var(--fs-h2); margin:0; top:84px;
+.sec-head h2 {
+  font-size: var(--fs-h2);
+  margin: 0 0 24px 0;
+  top: 84px;
 }
 .sec-body{
   background: color-mix(in oklab, var(--surface) 85%, transparent 15%);
@@ -347,4 +349,28 @@ body{
 /* Responsive */
 @media (max-width: 980px){
   .skills-grid{ grid-template-columns: 1fr; }
+}
+
+
+.pill-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+.pill-list img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
+}
+
+.pill-list img[alt="Express"],
+.pill-list img[alt="Socket.IO"] {
+  background: #fff;
+  padding: 6px;
+  border-radius: 8px;
 }

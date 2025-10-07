@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <style>
+    .bg { fill: #F8F49D; } /* Fondo amarillo claro */
+    .txt {
+      fill: #0F0C09; /* Texto negro */
+      font: 900 120px "Arial", sans-serif;
+    }
+  </style>
+
+  <!-- Fondo redondeado -->
+  <rect x="0" y="0" width="256" height="256" rx="56" class="bg"></rect>
+
+  <!-- Letras centradas -->
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" class="txt">AS</text>
+</svg>

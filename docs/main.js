@@ -75,7 +75,6 @@ document.addEventListener('click', async (e) => {
   const el = document.querySelector(sel);
   if (!el) return;
   const href = el.getAttribute('href') || '';
-  const text = href.startsWith('mailto:') ? href.replace('mailto:', '') : (el.textContent || '').trim();
   try {
     await navigator.clipboard.writeText(text);
     const prev = btn.textContent;

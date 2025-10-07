@@ -479,3 +479,68 @@ body{
   pointer-events: none;
 }
 .toast.show { opacity: 1; }
+
+
+/*Descripcion de habilidades*/
+
+/* ===== Tooltips para íconos de Habilidades ===== */
+.pill-list { overflow: visible; }              /* por si el contenedor recorta */
+.pill-list li {
+  position: relative;
+  overflow: visible;
+}
+
+/* Globito del tooltip */
+.pill-list li::after{
+  content: attr(data-label);
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-end: calc(100% + 10px);          /* arriba del ícono */
+  transform: translateX(-50%) translateY(6px);
+  background: color-mix(in oklab, var(--surface) 92%, transparent 8%);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .35rem .55rem;
+  font-size: .9rem;
+  white-space: nowrap;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur), transform var(--dur);
+  z-index: 5;
+}
+
+/* Flechita del tooltip */
+.pill-list li::before{
+  content: "";
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-end: calc(100% + 4px);
+  transform: translateX(-50%);
+  width: 10px; height: 10px;
+  background: color-mix(in oklab, var(--surface) 92%, transparent 8%);
+  border-left: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+  rotate: 45deg;
+  opacity: 0;
+  transition: opacity var(--dur);
+  z-index: 4;
+}
+
+/* Mostrar en hover y accesible en focus-within */
+.pill-list li:hover::after,
+.pill-list li:hover::before,
+.pill-list li:focus-within::after,
+.pill-list li:focus-within::before{
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Ajuste fino en pantallas pequeñas (que no tape) */
+@media (max-width: 520px){
+  .pill-list li::after{
+    inset-block-end: calc(100% + 8px);
+    font-size: .88rem;
+  }
+}

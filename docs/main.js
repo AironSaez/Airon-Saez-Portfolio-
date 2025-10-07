@@ -144,6 +144,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
+//descripcion de habilidades
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".pill-list li").forEach(li => {
+    const img = li.querySelector("img");
+    if (img) {
+      const label = img.getAttribute("alt") || img.getAttribute("title") || "";
+      li.setAttribute("data-label", label);
+      img.setAttribute("tabindex", "0");
+      img.setAttribute("aria-label", label);
+      img.setAttribute("role", "img");
+    }
+  });
+});
 
 

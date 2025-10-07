@@ -318,7 +318,7 @@ body{
 }
 
 
-/* ====== Skills Grid ====== */
+/*Skills Grid*/
 .skills-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -340,9 +340,9 @@ body{
   color: var(--ink);
 }
 
-/* Reutiliza tu .pill-list existente; añade un pequeño ajuste opcional */
+
 .pill-list li{
-  /* ya tienes estilos base; puedes añadir: */
+
   white-space: nowrap;
 }
 
@@ -374,3 +374,108 @@ body{
   padding: 6px;
   border-radius: 8px;
 }
+
+.contact-icon {
+  height: 22px;
+  width: 22px;
+  vertical-align: middle;
+  object-fit: contain;
+  margin-bottom: -3px; /* Ajusta alineación vertical */
+}
+
+/*Contacto*/
+
+
+#contacto .contact-links{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;                       
+  overflow-x: auto;                         
+  -webkit-overflow-scrolling: touch;
+  padding: 2px 2px 4px;                     
+  scrollbar-width: thin;
+  -ms-overflow-style: none;                 
+}
+#contacto .contact-links::-webkit-scrollbar{ height: 6px; }
+
+
+#contacto .contact-links .btn{
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: .6rem .95rem;
+  min-height: 42px;
+  line-height: 1;                          
+  white-space: nowrap !important;          
+  overflow-wrap: normal;                    
+  word-break: keep-all;                    
+  border-radius: 999px;
+  flex: 0 0 auto;                           
+}
+
+/* Íconos: tamaño fijo y alineados */
+#contacto .contact-links .contact-icon{
+  width: 18px; height: 18px;
+  flex: 0 0 18px;
+  object-fit: contain;
+  margin: 0;
+  vertical-align: middle;
+}
+
+/* Separadores*/
+#contacto .contact-links .sep{
+  color: var(--muted);
+  opacity: .75;
+  line-height: 1;
+  align-self: center;
+  white-space: nowrap;
+  margin: 0 2px;
+}
+
+/*visual para ghost */
+#contacto .contact-links .btn-ghost{
+  background: color-mix(in oklab, var(--surface) 92%, transparent 8%);
+  border-color: var(--border);
+}
+#contacto .contact-links .btn-ghost:hover{
+  background: var(--surface-2);
+  border-color: var(--primary);
+  box-shadow: 0 4px 16px rgba(242,236,148,.18);
+  transform: translateY(-1px);
+}
+
+/* Focus accesible y consistente */
+#contacto .contact-links .btn:focus-visible{
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 6px rgba(249,242,181,.15);
+}
+
+/* Micro-tuning en pantallas estrechas*/
+@media (max-width: 420px){
+  #contacto .contact-links{ gap: 10px; }
+  #contacto .contact-links .btn{
+    font-size: .95rem;
+    padding: .55rem .85rem;
+    min-height: 40px;
+  }
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface-2);
+  color: var(--ink);
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.toast.show { opacity: 1; }

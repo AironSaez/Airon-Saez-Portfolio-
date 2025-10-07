@@ -1,4 +1,4 @@
-// ------- Menú móvil -------
+// Menú móvil 
 const menuBtn = document.getElementById('menuToggle');
 const menu = document.getElementById('menu');
 if (menuBtn && menu) {
@@ -7,7 +7,6 @@ if (menuBtn && menu) {
     menuBtn.setAttribute('aria-expanded', String(open));
   });
 
-  // Cerrar al hacer click en un enlace
   menu.querySelectorAll('a').forEach(a =>
     a.addEventListener('click', () => {
       menu.classList.remove('is-open');
@@ -16,7 +15,7 @@ if (menuBtn && menu) {
   );
 }
 
-// ------- Resaltado de sección activa -------
+// Resaltado de sección activa
 const navLinks = Array.from(document.querySelectorAll('.menu a'));
 const targets = navLinks
   .map(a => document.querySelector(a.getAttribute('href')))
@@ -36,7 +35,6 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 targets.forEach(t => sectionObserver.observe(t));
 
-// ------- Scroll suave para botones con data-scroll -------
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('[data-scroll]');
   if (!btn) return;
@@ -44,7 +42,6 @@ document.addEventListener('click', (e) => {
   if (target) target.scrollIntoView({ behavior: 'smooth' });
 });
 
-// ------- Filtros de proyectos -------
 const chipButtons = Array.from(document.querySelectorAll('.chip[data-filter]'));
 const cards = Array.from(document.querySelectorAll('.card[data-tags]'));
 
@@ -67,10 +64,10 @@ chipButtons.forEach(btn => {
 // Estado inicial
 setFilter('all');
 
-// ------- Lazy para imágenes sin atributo loading -------
+
 document.querySelectorAll('img:not([loading])').forEach(img => img.loading = 'lazy');
 
-// ------- Copiar correo -------
+// Copiar correo
 document.addEventListener('click', async (e) => {
   const btn = e.target.closest('[data-copy]');
   if (!btn) return;
@@ -91,7 +88,7 @@ document.addEventListener('click', async (e) => {
   }
 });
 
-// ------- Modal "Ver caso" -------
+// Modal "Ver caso"
 const modal = document.getElementById('modal-caso');
 const modalDialog = modal?.querySelector('.modal__dialog');
 const openers = document.querySelectorAll('[data-case]');
@@ -132,3 +129,21 @@ document.addEventListener('keydown', (e) => {
     else if (!e.shiftKey && i === list.length - 1) { list[0].focus(); e.preventDefault(); }
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const correoBtn = document.getElementById("btnCorreo");
+  const toast = document.getElementById("toast");
+  const correo = "aironsaez4@gmail.com";
+
+  correoBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(correo).then(() => {
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2000);
+    });
+  });
+});
+
+
+
+

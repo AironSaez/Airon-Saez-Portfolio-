@@ -201,6 +201,10 @@ body{
   overflow-wrap: break-word;
   white-space: normal;
 }
+.job-desc {
+  text-align: justify;
+  text-align-last: left; /* mantiene la última línea alineada a la izquierda */
+}
 
 /*Proyectos*/
 .filters{ display:flex; flex-wrap:wrap; gap: 8px; }
